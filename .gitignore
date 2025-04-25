@@ -1,0 +1,16 @@
+# Ignore virtual environment
+myenv/
+.env
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.db
+*.sqlite3
+.DS_Store
+
+# Ignore VS Code settings
+.vscode/
+
+# Ignore secret keys file (if you use one)
+constants.py
