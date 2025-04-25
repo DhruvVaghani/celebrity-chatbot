@@ -1,21 +1,31 @@
-## Integrating code with OpenAI API
+# ## Integrating code with OpenAI API
+# import os
+# import streamlit as st
+# openai_key = st.secrets["OPENAI_API_KEY"]
+# #from langchain_community.llms import ChatOpenAI 
+# import streamlit as st
+# #from langchain import PromptTemplate
+# from langchain.chains import LLMChain
+# from langchain.chains import SequentialChain
+# from langchain.memory import ConversationBufferMemory
+# import wikipedia
+# #from langchain.chat_models import ChatOpenAI
+# import urllib.parse
+# from langchain_core.prompts import PromptTemplate
+# from langchain_community.chat_models import ChatOpenAI
+
 import os
 import streamlit as st
-openai_key = st.secrets["OPENAI_API_KEY"]
-#from langchain_community.llms import ChatOpenAI 
-import streamlit as st
-#from langchain import PromptTemplate
-from langchain.chains import LLMChain
-from langchain.chains import SequentialChain
-from langchain.memory import ConversationBufferMemory
 import wikipedia
-#from langchain.chat_models import ChatOpenAI
-import urllib.parse
-from langchain_core.prompts import PromptTemplate
+
+
 from langchain_community.chat_models import ChatOpenAI
+from langchain_core.prompts import PromptTemplate
+from langchain.chains import LLMChain, SequentialChain
+from langchain.memory import ConversationBufferMemory
 
 
-
+openai_key = st.secrets["OPENAI_API_KEY"]
 os.environ["OPENAI_API_KEY"] = openai_key
 
 # Step 1: Autocomplete using Wikipedia API
